@@ -10,11 +10,17 @@ namespace Calculadora
         private void timer1_Tick(object sender, EventArgs e)
         {
             
+         
         }
 
         private void progressBar1_Click(object sender, EventArgs e)
         {
 
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+        
+            }
     }
 }

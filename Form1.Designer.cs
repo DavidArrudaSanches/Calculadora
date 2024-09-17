@@ -73,6 +73,7 @@
             pictureBox2.TabIndex = 2;
             pictureBox2.TabStop = false;
             pictureBox2.Visible = false;
+            pictureBox2.Click += pictureBox2_Click;
             // 
             // Form1
             // 
@@ -83,8 +84,10 @@
             Controls.Add(pictureBox2);
             Controls.Add(progressBar1);
             Controls.Add(pictureBox1);
+            FormBorderStyle = FormBorderStyle.None;
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Form1";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
