@@ -31,9 +31,9 @@
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             pictureBox1 = new PictureBox();
+            pictureBox2 = new PictureBox();
             progressBar1 = new ProgressBar();
             timer1 = new System.Windows.Forms.Timer(components);
-            pictureBox2 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
@@ -47,26 +47,12 @@
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
-            // 
-            // progressBar1
-            // 
-            progressBar1.Location = new Point(12, 12);
-            progressBar1.Maximum = 10;
-            progressBar1.Name = "progressBar1";
-            progressBar1.Size = new Size(776, 57);
-            progressBar1.TabIndex = 1;
-            progressBar1.Click += progressBar1_Click;
-            // 
-            // timer1
-            // 
-            timer1.Enabled = true;
-            timer1.Interval = 1000;
-            timer1.Tick += timer1_Tick;
+            pictureBox1.Click += pictureBox1_Click;
             // 
             // pictureBox2
             // 
             pictureBox2.Image = Properties.Resources.a0261a72251486e2168dfdbde1f1cc27;
-            pictureBox2.Location = new Point(233, 75);
+            pictureBox2.Location = new Point(218, 56);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(352, 382);
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
@@ -74,6 +60,21 @@
             pictureBox2.TabStop = false;
             pictureBox2.Visible = false;
             pictureBox2.Click += pictureBox2_Click;
+            // 
+            // progressBar1
+            // 
+            progressBar1.Location = new Point(282, 200);
+            progressBar1.Maximum = 10;
+            progressBar1.Name = "progressBar1";
+            progressBar1.Size = new Size(227, 38);
+            progressBar1.TabIndex = 3;
+            progressBar1.Click += progressBar1_Click;
+            // 
+            // timer1
+            // 
+            timer1.Enabled = true;
+            timer1.Interval = 1000;
+            timer1.Tick += timer1_Tick;
             // 
             // Form1
             // 
@@ -97,8 +98,8 @@
         #endregion
 
         private PictureBox pictureBox1;
+        private PictureBox pictureBox2;
         private ProgressBar progressBar1;
         private System.Windows.Forms.Timer timer1;
-        private PictureBox pictureBox2;
     }
 }
