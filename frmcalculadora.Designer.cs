@@ -46,6 +46,7 @@
             sinMult = new Label();
             sinIgual = new Label();
             sinDiv = new Label();
+            txtVisor = new TextBox();
             SuspendLayout();
             // 
             // label1
@@ -212,6 +213,13 @@
             sinDiv.TabIndex = 17;
             sinDiv.Click += sinDiv_Click;
             // 
+            // txtVisor
+            // 
+            txtVisor.Location = new Point(58, 60);
+            txtVisor.Name = "txtVisor";
+            txtVisor.Size = new Size(178, 23);
+            txtVisor.TabIndex = 18;
+            // 
             // frmcalculadora
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -219,6 +227,7 @@
             BackColor = Color.White;
             BackgroundImage = Properties.Resources.calculadora_png;
             ClientSize = new Size(316, 331);
+            Controls.Add(txtVisor);
             Controls.Add(sinDiv);
             Controls.Add(sinIgual);
             Controls.Add(sinMult);
@@ -263,5 +272,6 @@
         private Label sinMult;
         private Label sinIgual;
         private Label sinDiv;
+        private TextBox txtVisor;
     }
 }
