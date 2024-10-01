@@ -30,37 +30,40 @@
         {
             txtCelsius = new TextBox();
             buttoncalcf = new Button();
-            textBox1 = new TextBox();
+            txtfahrenheit = new TextBox();
             label1 = new Label();
             label2 = new Label();
             SuspendLayout();
             // 
             // txtCelsius
             // 
-            txtCelsius.Location = new Point(215, 131);
+            txtCelsius.Location = new Point(12, 35);
             txtCelsius.Name = "txtCelsius";
             txtCelsius.Size = new Size(329, 23);
             txtCelsius.TabIndex = 0;
+            txtCelsius.TextChanged += txtCelsius_TextChanged;
             // 
             // buttoncalcf
             // 
-            buttoncalcf.Location = new Point(329, 180);
+            buttoncalcf.Location = new Point(128, 64);
             buttoncalcf.Name = "buttoncalcf";
             buttoncalcf.Size = new Size(92, 43);
             buttoncalcf.TabIndex = 1;
             buttoncalcf.Text = "Calcular";
             buttoncalcf.UseVisualStyleBackColor = true;
+            buttoncalcf.Click += buttoncalcf_Click;
             // 
-            // textBox1
+            // txtfahrenheit
             // 
-            textBox1.Location = new Point(215, 256);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(329, 23);
-            textBox1.TabIndex = 2;
+            txtfahrenheit.Location = new Point(12, 113);
+            txtfahrenheit.Name = "txtfahrenheit";
+            txtfahrenheit.Size = new Size(329, 23);
+            txtfahrenheit.TabIndex = 2;
+            txtfahrenheit.TextChanged += txtfahrenheit_TextChanged;
             // 
             // label1
             // 
-            label1.Location = new Point(329, 105);
+            label1.Location = new Point(128, 9);
             label1.Name = "label1";
             label1.Size = new Size(92, 23);
             label1.TabIndex = 3;
@@ -68,7 +71,7 @@
             // 
             // label2
             // 
-            label2.Location = new Point(329, 295);
+            label2.Location = new Point(128, 139);
             label2.Name = "label2";
             label2.Size = new Size(92, 23);
             label2.TabIndex = 4;
@@ -78,14 +81,14 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(357, 176);
             Controls.Add(label2);
             Controls.Add(label1);
-            Controls.Add(textBox1);
+            Controls.Add(txtfahrenheit);
             Controls.Add(buttoncalcf);
             Controls.Add(txtCelsius);
             Name = "frmfahrenheit";
-            Text = "frmfahrenheit";
+            Text = " ";
             ResumeLayout(false);
             PerformLayout();
         }
@@ -94,7 +97,7 @@
 
         private TextBox txtCelsius;
         private Button buttoncalcf;
-        private TextBox textBox1;
+        private TextBox txtfahrenheit;
         private Label label1;
         private Label label2;
     }

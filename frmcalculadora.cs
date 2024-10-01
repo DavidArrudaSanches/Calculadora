@@ -134,7 +134,8 @@ namespace Calculadora
 
         private void celsiusParaFahToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            frmfahrenheit frmfahrenheit = new frmfahrenheit();
+            frmfahrenheit.ShowDialog();
         }
 
         private void sairToolStripMenuItem_Click(object sender, EventArgs e)
