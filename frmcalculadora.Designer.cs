@@ -47,6 +47,12 @@
             sinIgual = new Label();
             sinDiv = new Label();
             txtVisor = new TextBox();
+            menuStrip1 = new MenuStrip();
+            conversorToolStripMenuItem = new ToolStripMenuItem();
+            celsiusParaFahToolStripMenuItem = new ToolStripMenuItem();
+            centimetrosParaPolegadasToolStripMenuItem = new ToolStripMenuItem();
+            sairToolStripMenuItem = new ToolStripMenuItem();
+            menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // label1
@@ -220,6 +226,43 @@
             txtVisor.Size = new Size(178, 23);
             txtVisor.TabIndex = 18;
             // 
+            // menuStrip1
+            // 
+            menuStrip1.Items.AddRange(new ToolStripItem[] { conversorToolStripMenuItem, sairToolStripMenuItem });
+            menuStrip1.Location = new Point(0, 0);
+            menuStrip1.Name = "menuStrip1";
+            menuStrip1.Size = new Size(316, 24);
+            menuStrip1.TabIndex = 19;
+            menuStrip1.Text = "menuStrip1";
+            // 
+            // conversorToolStripMenuItem
+            // 
+            conversorToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { celsiusParaFahToolStripMenuItem, centimetrosParaPolegadasToolStripMenuItem });
+            conversorToolStripMenuItem.Name = "conversorToolStripMenuItem";
+            conversorToolStripMenuItem.Size = new Size(73, 20);
+            conversorToolStripMenuItem.Text = "Conversor";
+            conversorToolStripMenuItem.Click += conversorToolStripMenuItem_Click;
+            // 
+            // celsiusParaFahToolStripMenuItem
+            // 
+            celsiusParaFahToolStripMenuItem.Name = "celsiusParaFahToolStripMenuItem";
+            celsiusParaFahToolStripMenuItem.Size = new Size(222, 22);
+            celsiusParaFahToolStripMenuItem.Text = "Celsius para Fahrenheit";
+            celsiusParaFahToolStripMenuItem.Click += celsiusParaFahToolStripMenuItem_Click;
+            // 
+            // centimetrosParaPolegadasToolStripMenuItem
+            // 
+            centimetrosParaPolegadasToolStripMenuItem.Name = "centimetrosParaPolegadasToolStripMenuItem";
+            centimetrosParaPolegadasToolStripMenuItem.Size = new Size(222, 22);
+            centimetrosParaPolegadasToolStripMenuItem.Text = "Centimetros para Polegadas";
+            // 
+            // sairToolStripMenuItem
+            // 
+            sairToolStripMenuItem.Name = "sairToolStripMenuItem";
+            sairToolStripMenuItem.Size = new Size(38, 20);
+            sairToolStripMenuItem.Text = "Sair";
+            sairToolStripMenuItem.Click += sairToolStripMenuItem_Click;
+            // 
             // frmcalculadora
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -246,9 +289,14 @@
             Controls.Add(num0);
             Controls.Add(num00);
             Controls.Add(label1);
+            Controls.Add(menuStrip1);
+            MainMenuStrip = menuStrip1;
             Margin = new Padding(2);
             Name = "frmcalculadora";
             Text = "frmcalculadora";
+            FormClosed += frmcalculadora_FormClosed;
+            menuStrip1.ResumeLayout(false);
+            menuStrip1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -273,5 +321,10 @@
         private Label sinIgual;
         private Label sinDiv;
         private TextBox txtVisor;
+        private MenuStrip menuStrip1;
+        private ToolStripMenuItem conversorToolStripMenuItem;
+        private ToolStripMenuItem celsiusParaFahToolStripMenuItem;
+        private ToolStripMenuItem centimetrosParaPolegadasToolStripMenuItem;
+        private ToolStripMenuItem sairToolStripMenuItem;
     }
 }

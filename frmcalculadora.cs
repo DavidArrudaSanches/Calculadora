@@ -9,8 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Calculadora
-{ 
-       
+{
+
     public partial class frmcalculadora : Form
     {
         float valor1 = 0;
@@ -86,7 +86,7 @@ namespace Calculadora
 
         private void sinMais_Click(object sender, EventArgs e)
         {
-            valor1=Convert.ToSingle(txtVisor.Text);
+            valor1 = Convert.ToSingle(txtVisor.Text);
             operacao = "soma";
             txtVisor.Clear();
         }
@@ -94,7 +94,7 @@ namespace Calculadora
         private void sinIgual_Click(object sender, EventArgs e)
         {
             valor2 = Convert.ToSingle(txtVisor.Text);
-            if (operacao=="soma")
+            if (operacao == "soma")
             {
                 resultado = valor1 + valor2;
             }
@@ -110,7 +110,7 @@ namespace Calculadora
             {
                 resultado = valor1 * valor2;
             }
-            txtVisor.Text=resultado.ToString();
+            txtVisor.Text = resultado.ToString();
         }
 
         private void sinMenos_Click(object sender, EventArgs e)
@@ -125,6 +125,27 @@ namespace Calculadora
             valor1 = Convert.ToSingle(txtVisor.Text);
             operacao = "divisao";
             txtVisor.Clear();
+        }
+
+        private void conversorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void celsiusParaFahToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void sairToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+
+        }
+
+        private void frmcalculadora_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
